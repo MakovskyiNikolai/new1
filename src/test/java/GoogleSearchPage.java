@@ -20,11 +20,6 @@ public class GoogleSearchPage {
     driver.manage().window().maximize();
     driver.get("http://www.google.com");
   }
-  @After
-  public void tearDown() throws Exception {
-    driver.quit();
-  }
-
 
   @Test
   public void testGoogleSearch(){
@@ -39,5 +34,8 @@ public Boolean apply(WebDriver d){
 assertEquals("Selenium testing tools cookbook - Пошук Google",
         driver.getTitle());
     }
-
+@After
+  public void tearDown() throws Exception {
+    driver.quit();
+}
 }
